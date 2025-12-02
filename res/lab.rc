@@ -1,0 +1,15 @@
+#include <winres.h>
+#include "..//src//resource.h"
+
+/* Иконка приложения */
+IDI_APP ICON "imgs\\lab.ico"
+
+/* Диалог "Программы автозапуска" */
+IDD_VIEWBOX DIALOGEX DISCARDABLE 0, 0, 240, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Список программ автозапуска"
+FONT 8, "MS Shell Dlg"
+BEGIN
+	LISTBOX IDW_LISTBOX, 10, 10, 220, 166, WS_BORDER | WS_HSCROLL | WS_VSCROLL | LBS_NOTIFY
+	DEFPUSHBUTTON "OK", IDOK, 180, 176, 50, 14
+END
